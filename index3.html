@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+1)суму;
+2)добуток;
+3)середнє арифметичне;
+4)мінімальне значення.  -->
+
+<body>
+    <table>
+        <!-- розмітка -->
+        <h4>Заповніть клітинки числами</h4>
+        <br>
+        <tr>
+            <td><label><input id="numb1" type="number" value=""> </label></td>
+            <td><label><input id="numb2" type="number" value=""> </label></td>
+        </tr>
+        <tr>
+            <td><label><input id="numb3" type="number" value=""> </label></td>
+            <td><label><input id="numb4" type="number" value=""> </label></td>
+        </tr>
+    </table>
+
+    <!-- кнопки -->
+    <button id="btnSum">Сума</button>
+    <button id="btnDob">Добуток</button>
+    <button id="btnAryfm">Сер. арифм.</button>
+    <button id="btnMin">Мінімальне</button> <br>
+    <label> Результат <input id="res" type="text"> </label>
+
+    <script>
+
+        function sum(numb1, numb2, numb3, numb4) {
+            return numb1 + numb2 + numb3 + numb4
+        }
+
+        function dob(numb1, numb2, numb3, numb4) {
+            return numb1 * numb2 * numb3 * numb4
+        }
+
+        function aryfm(numb1, numb2, numb3, numb4) {
+            return (sum(numb1, numb2, numb3, numb4)) / 4
+        }
+
+        //натиснули кнопку 
+        document.getElementById("btnSum").onclick = function () {
+            let numb1 = parseFloat(document.getElementById("numb1").value)
+            let numb2 = parseFloat(document.getElementById("numb2").value)
+            let numb3 = parseFloat(document.getElementById("numb3").value)
+            let numb4 = parseFloat(document.getElementById("numb4").value)
+            let s = sum(numb1, numb2, numb3, numb4)
+            document.getElementById("res").value = s
+        }
+
+        document.getElementById("btnDob").onclick = function () {
+            let numb1 = parseFloat(document.getElementById("numb1").value)
+            let numb2 = parseFloat(document.getElementById("numb2").value)
+            let numb3 = parseFloat(document.getElementById("numb3").value)
+            let numb4 = parseFloat(document.getElementById("numb4").value)
+            let s = dob(numb1, numb2, numb3, numb4)
+            document.getElementById("res").value = s
+        }
+        document.getElementById("btnAryfm").onclick = function () {
+            let numb1 = parseFloat(document.getElementById("numb1").value)
+            let numb2 = parseFloat(document.getElementById("numb2").value)
+            let numb3 = parseFloat(document.getElementById("numb3").value)
+            let numb4 = parseFloat(document.getElementById("numb4").value)
+            let s = aryfm(numb1, numb2, numb3, numb4)
+            document.getElementById("res").value = s
+        }
+        document.getElementById("btnMin").onclick = function () {
+            let numb1 = parseFloat(document.getElementById("numb1").value)
+            let numb2 = parseFloat(document.getElementById("numb2").value)
+            let numb3 = parseFloat(document.getElementById("numb3").value)
+            let numb4 = parseFloat(document.getElementById("numb4").value)
+            let s = Math.min(numb1, numb2, numb3, numb4)
+            document.getElementById("res").value = s
+        }
+
+    </script>
+
+</body>
+
+</html>

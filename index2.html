@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Задача 2. Створити функцію, яка за номером дня тижня повертає кількість уроків(так, як у вас було у школі). -->
+
+<body>
+
+    <script>
+        function seasons(dayNum) {
+            if (dayNum < 8 && dayNum > 0) {
+                switch (dayNum) {
+                    case 1: document.write("6 уроківо")
+                        break;
+                    case 2: document.write("5 уроків")
+                        break;
+                    case 3: document.write("7 уроків")
+                        break;
+                    case 4: document.write("5 уроків")
+                        break;
+                    case 5: document.write("4 уроків")
+                        break;
+                    case 6: document.write("вихідний")
+                        break;
+                    case 7: document.write("вихідний")
+                        break;
+                }
+            }
+            else {
+                document.write("Будь ласка, введіть правильний день тижня")
+            }
+        }
+
+
+        let dayNum = parseInt(prompt('Введіть номер дня тижня'))
+        seasons(dayNum)
+    </script>
+</body>
+
+</html>

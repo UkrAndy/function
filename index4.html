@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Задача 4. Створити функцію, яка для 3 заданих чисел знаходить кількість парних. -->
+
+<body>
+    <label><input id="numb1" type="number" value=""> </label>
+    <label><input id="numb2" type="number" value=""> </label>
+    <label><input id="numb3" type="number" value=""> </label>
+    <button id="btnParn">Кількість парних</button> <br>
+    <label> Результат <input id="res" type="text"> </label>
+    <Script>
+        function klkParn(numb1, numb2, numb3) {
+            let kilk = 3
+            if (numb1 % 2)
+                kilk -= 1
+            if (numb2 % 2)
+                kilk -= 1
+            if (numb3 % 2)
+                kilk -= 1
+            return kilk
+        }
+        
+        //натиснули кнопку 
+        document.getElementById("btnParn").onclick = function () {
+            let numb1 = parseFloat(document.getElementById("numb1").value)
+            let numb2 = parseFloat(document.getElementById("numb2").value)
+            let numb3 = parseFloat(document.getElementById("numb3").value)
+            let s = klkParn(numb1, numb2, numb3)
+            document.getElementById("res").value = s
+        }
+
+    </Script>
+
+
+</body>
+
+</html>
