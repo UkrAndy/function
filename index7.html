@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,25 @@
 <!-- Задача 7. Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень
 (шляхи до зображень передаються у функцію) -->
 
+
+<script>
+    function showPicture(picNum) {
+        document.write(`<img src="${picNum}">`)
+    }
+    switch (Math.floor(Math.random() * 4) + 1) {
+        case 1: picNum = '1.jpg'
+            break;
+        case 2: picNum = '2.jpg'
+            break;
+        case 3: picNum = '3.png'
+            break;
+        case 4: picNum = '4.png'
+            break;
+    }
+    showPicture(picNum)
+</script>
+
 <body>
-    
 </body>
+
 </html>

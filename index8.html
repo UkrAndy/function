@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Задача 8. Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання,
+    куди переходимо при кліку на зображення (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a> -->
+
+<body>
+
+    <script>
+        function getBaner(img, zaholovok, link) {
+            document.write(`<a href="${link}"><img src="${img}" alt="${zaholovok}"></a>`)
+        }
+
+        let img = 'kypit-slona.png'
+        let zaholovok = 'Клікайте, та купіть!'
+        let link = 'https://rozetka.com.ua/soft_toys/c99051/tegi117602=sloni'
+
+        getBaner(img, zaholovok, link)
+    </script>
+</body>
+
+</html>
